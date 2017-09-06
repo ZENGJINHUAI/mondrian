@@ -13,61 +13,29 @@
   <description>Mondrian OLAP engine.</description>
   <url>http://github.com/pentaho/mondrian</url>
   <inceptionYear>2001</inceptionYear>
-  <organization>
-    <name>Pentaho</name>
-    <url>http://www.pentaho.com</url>
-  </organization>
-  <licenses>
-    <license>
-      <name>Eclipse Public License</name>
-      <url>http://www.eclipse.org/legal/epl-v10.html</url>
-    </license>
-  </licenses>
-
-  <developers>
-    <developer>
-      <id>julianhyde</id>
-      <name>Julian Hyde</name>
-      <email>julianhyde@gmail.com</email>
-      <url>https://github.com/julianhyde</url>
-      <roles>
-        <role>architect</role>
-        <role>developer</role>
-      </roles>
-      <timezone>-8</timezone>
-      <properties/>
-    </developer>
-  </developers>
-
-  <mailingLists>
-    <mailingList>
-      <name>Mondrian developers list</name>
-      <post>mondrian@pentaho.org</post>
-      <archive>http://lists.pentaho.org/pipermail/mondrian/</archive>
-    </mailingList>
-  </mailingLists>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
-  <!-- Environment settings. -->
-  <distributionManagement>
+  <repositories>
     <repository>
+      <releases>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+        <checksumPolicy>warn</checksumPolicy>
+      </releases>
       <id>pentaho</id>
-      <name>Pentaho repository</name>
-      <url>http://repository.pentaho.org/artifactory/repo</url>
+      <name>Pentaho</name>
+      <url>http://repo.pentaho.org/artifactory/repo</url>
       <layout>default</layout>
     </repository>
-  </distributionManagement>
-
-  <issueManagement/>
-
-  <scm>
-    <connection>scm:git:git://github.com/pentaho/mondrian.git</connection>
-    <developerConnection>scm:git:git@github.com:pentaho/mondrian.git</developerConnection>
-    <url>http://github.com/pentaho/mondrian/tree/master</url>
-  </scm>
+    <repository>
+      <id>pentaho-repo</id>
+      <name>pentaho-repo</name>
+      <url>https://public.nexus.pentaho.org/content/groups/omni/</url>
+    </repository>
+  </repositories>
 
   <!-- Dependencies. -->
   <dependencies>
@@ -229,35 +197,6 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-
-  <reporting>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <version>2.9.1</version>
-        <configuration>
-          <links>
-            <link>http://docs.oracle.com/javase/7/docs/api/</link>
-          </links>
-        </configuration>
-      </plugin>
-    </plugins>
-  </reporting>
-
-  <repositories>
-    <repository>
-      <releases>
-        <enabled>true</enabled>
-        <updatePolicy>always</updatePolicy>
-        <checksumPolicy>warn</checksumPolicy>
-      </releases>
-      <id>pentaho</id>
-      <name>Pentaho</name>
-      <url>http://repo.pentaho.org/artifactory/repo</url>
-      <layout>default</layout>
-    </repository>
-  </repositories>
 
   <build>
     <defaultGoal>package</defaultGoal>
