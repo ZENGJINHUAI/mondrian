@@ -90,7 +90,7 @@ oracleTrickle() {
 }
 
 mysql() {
-    java -cp "${CP}${PS}/usr/local/mysql-connector-java-3.1.12/mysql-connector-java-3.1.12-bin.jar" \
+    java -cp "${CP}${PS}lib/mysql-connector-java-5.1.17.jar" \
         mondrian.test.loader.MondrianFoodMartLoader \
         -verbose -aggregates -tables -data -indexes \
         -dataset=${dataset} \
@@ -98,7 +98,7 @@ mysql() {
         -inputFile="$inputFile" \
         -afterFile="$afterFile" \
         -outputQuoted=${outputQuoted} \
-        -outputJdbcURL="jdbc:mysql://localhost/${datasetLower}?user=foodmart&password=foodmart"
+        -outputJdbcURL="jdbc:mysql://localhost/${datasetLower}?user=root&password=root"
 }
 
 nuodb() {

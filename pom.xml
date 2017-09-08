@@ -6,52 +6,6 @@
   <artifactId>mondrian</artifactId>
   <version>4.7-SNAPSHOT</version>
   <name>mondrian</name>
-  <description>Mondrian OLAP engine.</description>
-  <url>http://github.com/pentaho/mondrian</url>
-  <inceptionYear>2001</inceptionYear>
-  <organization>
-    <name>Pentaho</name>
-    <url>http://www.pentaho.com</url>
-  </organization>
-  <licenses>
-    <license>
-      <name>Eclipse Public License</name>
-      <url>http://www.eclipse.org/legal/epl-v10.html</url>
-    </license>
-  </licenses>
-  <developers>
-    <developer>
-      <id>julianhyde</id>
-      <name>Julian Hyde</name>
-      <email>julianhyde@gmail.com</email>
-      <url>https://github.com/julianhyde</url>
-      <roles>
-        <role>architect</role>
-        <role>developer</role>
-      </roles>
-      <timezone>-8</timezone>
-    </developer>
-  </developers>
-  <mailingLists>
-    <mailingList>
-      <name>Mondrian developers list</name>
-      <post>mondrian@pentaho.org</post>
-      <archive>http://lists.pentaho.org/pipermail/mondrian/</archive>
-    </mailingList>
-  </mailingLists>
-  <scm>
-    <connection>scm:git:git://github.com/pentaho/mondrian.git</connection>
-    <developerConnection>scm:git:git@github.com:pentaho/mondrian.git</developerConnection>
-    <url>http://github.com/pentaho/mondrian/tree/master</url>
-  </scm>
-  <issueManagement />
-  <distributionManagement>
-    <repository>
-      <id>pentaho</id>
-      <name>Pentaho repository</name>
-      <url>http://repository.pentaho.org/artifactory/repo</url>
-    </repository>
-  </distributionManagement>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
@@ -216,6 +170,7 @@
     </repository>
   </repositories>
   <build>
+    <finalName>mondrian</finalName>
     <defaultGoal>package</defaultGoal>
     <resources>
       <resource>
