@@ -14,11 +14,13 @@
   <name>Pentaho Mondrian Parent POM</name>
   <description>Container pom for mondrian and mondrian workbench</description>
   <url>http://www.pentaho.com</url>
-  <scm>
-    <connection>scm:git:git@github.com:pentaho/mondrian.git</connection>
-    <developerConnection>scm:git:git@github.com:pentaho/mondrian.git</developerConnection>
-    <url>scm:git:git@github.com:pentaho/mondrian.git</url>
-  </scm>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>pentaho-repo</id>
+      <name>pentaho-repo</name>
+      <url>https://public.nexus.pentaho.org/content/groups/omni/</url>
+    </pluginRepository>
+  </pluginRepositories>
   <properties>
     <olap4j.version>1.2.0</olap4j.version>
     <commons-vfs2.version>2.1-20150824</commons-vfs2.version>
