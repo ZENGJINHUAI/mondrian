@@ -835,6 +835,7 @@ public interface Dialect {
         INFOBRIGHT,
         INGRES,
         INTERBASE,
+        KYLIN,
         LUCIDDB,
         MSSQL,
         MONETDB,

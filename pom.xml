@@ -5,7 +5,8 @@
   <parent>
     <groupId>org.pentaho</groupId>
     <artifactId>pentaho-ce-jar-parent-pom</artifactId>
-    <version>8.0-SNAPSHOT</version>
+    <!--<version>8.0-SNAPSHOT</version>-->
+    <version>7.1.0.4-66</version>
   </parent>
   <groupId>pentaho</groupId>
   <artifactId>pentaho-mondrian-parent-pom</artifactId>
@@ -14,6 +15,13 @@
   <name>Pentaho Mondrian Parent POM</name>
   <description>Container pom for mondrian and mondrian workbench</description>
   <url>http://www.pentaho.com</url>
+  <repositories>
+    <repository>
+      <id>pentaho-repo</id>
+      <name>pentaho-repo</name>
+      <url>https://public.nexus.pentaho.org/content/groups/omni/</url>
+    </repository>
+  </repositories>
   <pluginRepositories>
     <pluginRepository>
       <id>pentaho-repo</id>
