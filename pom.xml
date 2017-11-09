@@ -3,10 +3,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <!-- The basics. -->
-  <groupId>pentaho</groupId>
+  <groupId>com.qunar.3dparty</groupId>
   <artifactId>mondrian</artifactId>
   <packaging>jar</packaging>
-  <version>4.0-SNAPSHOT</version>
+  <version>4.4</version>
 
   <!-- More project information. -->
   <name>mondrian</name>
@@ -17,25 +17,6 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
-
-  <repositories>
-    <repository>
-      <releases>
-        <enabled>true</enabled>
-        <updatePolicy>always</updatePolicy>
-        <checksumPolicy>warn</checksumPolicy>
-      </releases>
-      <id>pentaho</id>
-      <name>Pentaho</name>
-      <url>http://repo.pentaho.org/artifactory/repo</url>
-      <layout>default</layout>
-    </repository>
-    <repository>
-      <id>pentaho-repo</id>
-      <name>pentaho-repo</name>
-      <url>https://public.nexus.pentaho.org/content/groups/omni/</url>
-    </repository>
-  </repositories>
 
   <!-- Dependencies. -->
   <dependencies>
@@ -201,6 +182,17 @@
   <build>
     <defaultGoal>package</defaultGoal>
     <plugins>
+      <plugin>
+        <artifactId>maven-jar-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>default-jar</id>
+            <configuration>
+              <classifier>kylin-dialect</classifier>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>
